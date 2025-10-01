@@ -13,7 +13,7 @@ public class Book extends BaseEntity
 {
     private String title;
     private double price;
-    private int nCopies;
+    private int numberOfCopies;
     private int pages;
     private int year;
 
@@ -23,6 +23,6 @@ public class Book extends BaseEntity
 
     public boolean isInStock()
     {
-        return nCopies>0;
+        return numberOfCopies >0;
     }
 }

@@ -45,9 +45,8 @@ public class AuthorService
 
         Author a = op.get();
 
-        if(a.numbersOfBooksInStocks()>0)
-            throw new IllegalArgumentException("Non posso cancella autore con libri in stock");
-
+        if(a.getBooks().isEmpty())
+            throw new IllegalArgumentException("Non è possibile cancellare l'autore che ha ancora libri in stock");
         repo.delete(a);
     }
 
