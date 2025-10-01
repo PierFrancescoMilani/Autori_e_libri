@@ -12,6 +12,6 @@ public class InputBookDto
     private int year;
     private int pages;
     private double price;
-    private int nCopies;
+    private int numberOfCopies;
     private UUID author_id;
 }

@@ -1,10 +1,7 @@
 package com.generation.autori_e_libri.services;
 
-import com.generation.autori_e_libri.model.dtos.InputAuthorDto;
 import com.generation.autori_e_libri.model.dtos.InputBookDto;
-import com.generation.autori_e_libri.model.dtos.OutputAuthorDto;
 import com.generation.autori_e_libri.model.dtos.OutputBookDto;
-import com.generation.autori_e_libri.model.entities.Author;
 import com.generation.autori_e_libri.model.entities.Book;
 import com.generation.autori_e_libri.model.repositories.AuthorRepository;
 import com.generation.autori_e_libri.model.repositories.BookRepository;
@@ -52,10 +49,8 @@ public class BookService
 
         Book b = op.get();
 
-        if (b.isInStock())
-            throw new IllegalArgumentException("Non è possibile cancellare libri ancora in stock");
 
-        bRepo.delete(b);
+        bRepo.cancellaPerFavore(b.getId());
     }
 
     private OutputBookDto convertToOutput(Book e)
@@ -79,7 +74,7 @@ public class BookService
         res.setYear(dto.getYear());
         res.setPages(dto.getPages());
         res.setPrice(dto.getPrice());
-        res.setNCopies(dto.getNCopies());
+        res.setNCopies(dto.getNumberOfCopies());
         res.setAuthor(aRepo.findById(dto.getAuthor_id()).get());
         //TODO 9 trovare grazie a repository di autore l'autore con id
         // dto.getAuthor_id(), associarlo al libro
