@@ -35,10 +35,12 @@ public class BookService
     }
 
     //scrittura convertita
-    public void save(InputBookDto dto)
+    public OutputBookDto save(InputBookDto dto)
     {
         Book b = convertToEntity(dto);
-        bRepo.save(b);
+        b=bRepo.save(b);
+
+        return convertToOutput(b);
     }
 
     public void delete(UUID id)

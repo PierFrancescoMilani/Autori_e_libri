@@ -32,8 +32,8 @@ public class BookController
     }
 
     @PostMapping
-    public void insert(@RequestBody InputBookDto dto)
+    public OutputBookDto insert(@RequestBody InputBookDto dto)
     {
-        serv.save(dto);
+        return serv.save(dto);
     }
 }
