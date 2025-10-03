@@ -30,10 +30,11 @@ public class AuthorService
     }
 
     //salvataggio convertito
-    public void save(InputAuthorDto dto)
+    public OutputAuthorDto save(InputAuthorDto dto)
     {
         Author a = convertToEntity(dto);
         repo.save(a);
+        return convertToOutput(a);
     }
 
     public void delete(UUID id)
@@ -47,6 +48,7 @@ public class AuthorService
 
         if(!a.getBooks().isEmpty())
             throw new IllegalArgumentException("Non è possibile cancellare l'autore che ha ancora libri in stock");
+
         repo.delete(a);
     }
 

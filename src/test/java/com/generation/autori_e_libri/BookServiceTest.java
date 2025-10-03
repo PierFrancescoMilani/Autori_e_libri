@@ -132,7 +132,7 @@ public class BookServiceTest
         b1.setPrice(18.90);
         b1.setPages(500);
         b1.setYear(1980);
-        b1.setNCopies(25);
+        b1.setNumberOfCopies(25);
         b1.setAuthor(a1);
 
         Book b2 = new Book();
@@ -140,7 +140,7 @@ public class BookServiceTest
         b2.setPrice(21.00);
         b2.setPages(700);
         b2.setYear(1988);
-        b2.setNCopies(12);
+        b2.setNumberOfCopies(12);
         b2.setAuthor(a1);
 
         // Libri per George Orwell
@@ -149,7 +149,7 @@ public class BookServiceTest
         b3.setPrice(15.50);
         b3.setPages(328);
         b3.setYear(1949);
-        b3.setNCopies(40);
+        b3.setNumberOfCopies(40);
         b3.setAuthor(a2);
 
         Book b4 = new Book();
@@ -157,7 +157,7 @@ public class BookServiceTest
         b4.setPrice(12.99);
         b4.setPages(112);
         b4.setYear(1945);
-        b4.setNCopies(35);
+        b4.setNumberOfCopies(35);
         b4.setAuthor(a2);
 
         // Libri per Jane Austen
@@ -166,7 +166,7 @@ public class BookServiceTest
         b5.setPrice(14.30);
         b5.setPages(432);
         b5.setYear(1813);
-        b5.setNCopies(32);
+        b5.setNumberOfCopies(32);
         b5.setAuthor(a3);
 
         Book b6 = new Book();
@@ -174,7 +174,7 @@ public class BookServiceTest
         b6.setPrice(13.50);
         b6.setPages(474);
         b6.setYear(1815);
-        b6.setNCopies(28);
+        b6.setNumberOfCopies(28);
         b6.setAuthor(a3);
 
         List<Book> libri = List.of(b1, b2, b3, b4, b5, b6);

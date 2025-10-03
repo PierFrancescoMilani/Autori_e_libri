@@ -17,7 +17,7 @@ public class Book extends BaseEntity
     private int pages;
     private int year;
 
-    //TODO 1 - Completare relazione con autore con annotazioni
+    // 1 - Completare relazione con autore con annotazioni
     @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
 

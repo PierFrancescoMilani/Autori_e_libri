@@ -52,9 +52,6 @@ public class BookService
 
         Book b = op.get();
 
-        if (b.isInStock())
-            throw new IllegalArgumentException("Non è possibile cancellare libri ancora in stock");
-
         bRepo.cancellaPerFavore(b.getId());
     }
 
@@ -81,7 +78,7 @@ public class BookService
         res.setPrice(dto.getPrice());
         res.setNumberOfCopies(dto.getNumberOfCopies());
         res.setAuthor(aRepo.findById(dto.getAuthor_id()).get());
-        //TODO 9 trovare grazie a repository di autore l'autore con id
+        //9 trovare grazie a repository di autore l'autore con id
         // dto.getAuthor_id(), associarlo al libro
 
 

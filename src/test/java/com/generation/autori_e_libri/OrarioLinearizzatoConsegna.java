@@ -124,11 +124,11 @@ public class OrarioLinearizzatoConsegna
         assertEquals(860,o1.getValoreMinuti(),"Aggiunta errata");
 
         OrarioLinearizzato o2 = new OrarioLinearizzato(1430);
-        o1.aggiungiMinuti(25);
+        o2.aggiungiMinuti(25);
         assertEquals(15,o2.getValoreMinuti(),"Aggiunta errata");
 
         OrarioLinearizzato o3 = new OrarioLinearizzato(1430);
-        o1.aggiungiMinuti(10);
+        o3.aggiungiMinuti(10);
         assertEquals(0,o3.getValoreMinuti(),"Aggiunta errata");
     }
 
@@ -140,15 +140,15 @@ public class OrarioLinearizzatoConsegna
         assertEquals(740,o1.getValoreMinuti(),"Sottrazione errata");
 
         OrarioLinearizzato o2 = new OrarioLinearizzato(30);
-        o1.sottraiMinuti(50);
+        o2.sottraiMinuti(50);
         assertEquals(1420,o2.getValoreMinuti(),"Sottrazione errata");
 
         OrarioLinearizzato o3 = new OrarioLinearizzato(30);
-        o1.sottraiMinuti(30);
+        o3.sottraiMinuti(30);
         assertEquals(0,o3.getValoreMinuti(),"Sottrazione errata");
 
         OrarioLinearizzato o4 = new OrarioLinearizzato(30);
-        o1.sottraiMinuti(31);
+        o4.sottraiMinuti(31);
         assertEquals(1439,o4.getValoreMinuti(),"Sottrazione errata");
     }
 }
