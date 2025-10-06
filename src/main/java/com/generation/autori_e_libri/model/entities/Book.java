@@ -3,6 +3,8 @@ package com.generation.autori_e_libri.model.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class Book extends BaseEntity
 {
+    @NotNull @NotBlank
     private String title;
     private double price;
     private int numberOfCopies;

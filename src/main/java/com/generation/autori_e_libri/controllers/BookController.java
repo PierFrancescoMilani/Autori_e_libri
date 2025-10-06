@@ -22,6 +22,7 @@ public class BookController
     @GetMapping
     public List<OutputBookDto> getAll()
     {
+        String s = "ciao".toLowerCase();
         return serv.findAllBooksAsDtos();
     }
 
